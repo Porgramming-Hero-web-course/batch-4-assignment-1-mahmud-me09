@@ -18,7 +18,7 @@ There are various types of typeguard of which the following are conventionally u
 ### Use cases of various types of type guard:
 Their use cases are discussed below:
 1. Using `typeof`:
-`typeof` normally returns the type of primitive and non-primitive data types. This `typeof` keyword is used in the conditional statement to check the type and performed its corresponding subsequent operation.
+`typeof` normally returns the type of primitive and non-primitive data types. This `typeof` keyword is used in the conditional statement to check the type and performed its corresponding subsequent operation of narrowing down the type.
 For Example:
 
 ```
@@ -33,7 +33,7 @@ const convertingString = (param:string | number):string =>{
 ```
 
 2. using `in` Keyword:
-Normally `in` checks the keys of an object. This is also used for type guard.
+Normally `in` checks whether the key exists in an object. This is used for type guard with the same use case to narrow down the type.
 For example:
 ```
 type Car = {
@@ -57,7 +57,7 @@ const VehicleCheck = (vechicle: Car | Motorcycle)=>{
 ```
 
 3. using `instanceof`
-The `instanceof` operator tests to see if an object is an instance of a class. The return value is a boolean.
+The `instanceof` operator tests to see if an object is an instance of a class. The return value is a boolean. In a conditional statement block using this `instanceof` keyword is used for narrowing down the type.
 
 ```
 class Car = {

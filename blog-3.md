@@ -1,10 +1,10 @@
 # Why are Type Guards Necessary? Discuss Various Types of Type Guards and Their Use Cases.
 
 ### Type Guards:
-Type guard is technique of narrowing down the types with the help of conditional block. Type guard returns a boolean value.
+Type guard is technique of narrowing down the types with the help of conditional block.
 
 ### Necessities of typeguard:
-As typeScript is statically typed language and we get to know about most of the issues during compile time only, type guard in typeScript becomes handly because it helps detect more runtime failures that the TypeScript framework can not handle. So the necessities of typescript in short are:
+As typeScript is statically typed language, we come to know most of the issues during the time of compilation. Type guard in typeScript becomes befitting because it helps to detect more runtime failures that the TypeScript framework cannot handle and untectable during compilation by adding an extra layer of safety in type checking. So the necessities of typescript in short are:
 1. ensures accurate type inference.
 2. prevents runtime errors thereby ensures type safety at runtime.
 

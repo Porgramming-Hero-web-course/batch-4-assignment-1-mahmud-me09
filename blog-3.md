@@ -15,7 +15,7 @@ There are various types of typeguard of which the following are conventionally u
 3. using `instanceof`
 4. using `is` for custom type guard
 
-### use cases of various types of type guard:
+### Use cases of various types of type guard:
 Their use cases are discussed below:
 1. Using `typeof`:
 `typeof` normally returns the type of primitive and non-primitive data types. This `typeof` keyword is used in the conditional statement to check the type and performed its corresponding subsequent operation.

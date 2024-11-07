@@ -12,7 +12,7 @@ Their use cases are discussed below:
 1. Using typeof:
 typeof normally returns the type of primitive and non-primitive data types. This typeof keyword is used in the conditional statement to check the type and performed its corresponding subsequent operation.
 For Example: 
-'''
+```
 const add = (param1:string|number, param2:string|number) =>{
     if(typeof param1 === "number" && typeof param2 === "number"){
         return param1 + param2
@@ -21,7 +21,7 @@ const add = (param1:string|number, param2:string|number) =>{
     }
 }
 
-'''tsc
+```tsc
 
 2. using in Keyword:
 Normally in checks the keys of an object. This is also used for type guard.

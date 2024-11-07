@@ -1,7 +1,7 @@
 # Why are Type Guards Necessary? Discuss Various Types of Type Guards and Their Use Cases.
 
 ### Type Guards:
-Type guard is technique of narrowing down the types. In this technique types are declared using conditional block. Type guard returns a boolean value.
+Type guard is technique of narrowing down the types with the help of conditional block. Type guard returns a boolean value.
 
 ### Necessities of typeguard:
 As typeScript is statically typed language and we get to know about most of the issues during compile time only, type guard in typeScript becomes handly because it helps detect more runtime failures that the TypeScript framework can not handle. So the necessities of typescript in short are:
@@ -19,14 +19,14 @@ There are various types of typeguard of which the following are conventionally u
 Their use cases are discussed below:
 1. Using `typeof`:
 `typeof` normally returns the type of primitive and non-primitive data types. This `typeof` keyword is used in the conditional statement to check the type and performed its corresponding subsequent operation.
-For Example: 
+For Example:
 
 ```
-const identifyNumber = (param1:string|number, param2:string|number) =>{
-    if(typeof param1 === "number" && typeof param2 === "number"){
-        return param1 + param2
+const convertingString = (param:string | number):string =>{
+    if(typeof param === "number"){
+        return param.toString()
     }else{
-        return param1.toString() + param2.toString()
+        return param
     }
 }
 
@@ -56,8 +56,8 @@ const VehicleCheck = (vechicle: Car | Motorcycle)=>{
 
 ```
 
-3. using instanceof
-The `instanceof` operator tests to see if the prototype property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value.
+3. using `instanceof`
+The `instanceof` operator tests to see if an object is an instance of a class. The return value is a boolean.
 
 ```
 class Car = {
@@ -80,7 +80,7 @@ const VehicleCheck = (vechicle: Car | Motorcycle)=>{
 }
 ```
 4. using `is` for custom type guard:
-
+Custom Type Guards are user-defined utility functions that return a boolean by checking required conditions. Within these functions, types of a variable / parameter is checked through `is` operator and narrowing down the types. Syntax is `variableName is typeName`.
 
 ```
 interface Car = {
@@ -93,7 +93,7 @@ interface Motorcycle = {
 }
 
 const isCar (vehicle: Car | Motorcycle): vehicle is Car{
-    return door in vehicle
+    return "door" in vehicle
 }
 
 const VehicleCheck = (vechicle: Car | Motorcycle)=>{
